@@ -54,12 +54,12 @@ SetWorkingDir %A_ScriptDir%
 	+g::Send, ^g ;; Group tracks/devices
 
 	w::Send, ^s ;; Save
-	r::Send, F9 ;; Record
+	r::F9 ;; Record
 	t::Send, ^t ;; New Audio Track
 	y::Send, ^y ;; Redo
 	u::Send, ^z ;; Undo
 	s::Send, ^e ;; Split
-	d::Send, ^d ;; Duplicate
+	e::Send, ^d ;; Duplicate (I remember it as 'extend')
 	f::Send, ^f ;; Find
 	g::Send, ^j ;; Glue
 	z::Send, 0  ;; Disable clip
@@ -68,6 +68,7 @@ SetWorkingDir %A_ScriptDir%
 	n::Send, ^+m ;; Create MIDI Clip
 	i::Send, ^i ;; Insert time
 	a::Send, ^a ;; Select all
+    d::Delete ;; Delete thing (clips, tracks, devices, etc)
 
 	;;
 	;; Cut
@@ -174,5 +175,6 @@ SetWorkingDir %A_ScriptDir%
 	p & t::AddPlugin("Tuner")
 	p & d::AddPlugin("Ping Pong Delay")
 	p & g::AddPlugin("Guitar Rig 5")
+    p & u::AddPlugin("Utility")
 
 #IfWinActive
