@@ -113,6 +113,15 @@ SetWorkingDir %A_ScriptDir%
 	.::Send, ^1 ;; Increase grid density
 	/::Send, ^4 ;; Toggle disable grid
 
+    ;;
+    ;; But also map the same keys to the number row without needing Ctrl
+    ;; so that when using the mouse these controls can still be reached
+    ;;
+    1::Send, ^1
+    2::Send, ^2
+    3::Send, ^3
+    4::Send, ^4
+
 	;;
 	;; Zoom in and out with Ctrl + mousewheel and Shift >/< (in/out)
 	;;
