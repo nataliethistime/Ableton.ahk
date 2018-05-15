@@ -172,7 +172,7 @@ SetWorkingDir %A_ScriptDir%
 		PixelSearch, ArrowX, ArrowY, 0, 0, A_ScreenWidth, 200, 0xf47711, 0, Fast RGB
 
 		if ErrorLevel {
-			MsgBox, Fuck a duck
+			MsgBox, "Could not find where to click"
 		} else {
 			MouseClick, Left, A_ScreenWidth / 2, ArrowY, 1, 0
 		}
